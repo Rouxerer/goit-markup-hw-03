@@ -9,7 +9,7 @@
   --ocean: #404BBF;
   --dark: #2E2F42;
   --success: #31D0AA;
-  --body-text: #434455;
+  --body-text: #434455; 
   --subtle-text:#8E8F99;
   --cornflower:#E7E9FC;
   --cloud:#F4F4FD;
@@ -20,10 +20,39 @@
 }
 
 
+
 body {
   font-family: "Roboto","Raleway", sans-serif;
   background-color: #fff;
   color: var(--body-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  margin:0;
+
+}
+
+.list{
+  list-style: none;
+  padding-left:0;
+  margin:0;
+  flex-basis: calc((100% - 30px)/4);
+}
+
+.links{
+  text-decoration:none;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height:auto;
 }
 
 .wrapper{
@@ -79,7 +108,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -144,7 +172,6 @@ body {
 /* navigations */
 
 .navigation {
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -158,8 +185,12 @@ body {
   width: 100%;
   height: calc(100vh - 10%);
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
+
+
 
 .title-container {
   display: flex;
@@ -171,23 +202,37 @@ body {
   background-color: var(--dark);
 }
 
-.title-container div {
+.container{
   display: flex;
-  width: 500px;
-  height: 100px;
-  margin: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 1158px;
+  padding-left:15px;
+  padding-right:15px;
+  margin: 0 auto;
 }
 
-.title-container div h1 {
+.contain-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 80%;
+  gap:30px;
+}
+
+.the-title{
   color: var(--white);
   text-align: center;
-  font-family: Roboto;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.07; /* 107.143% */
   letter-spacing: 1.12px;
 }
+
+
 
 .order-service {
   display: inline-flex;
@@ -201,7 +246,6 @@ body {
   color: var(--white);
 
   /* Button Text */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -223,26 +267,40 @@ body {
 
 /* Second Section */
 
-.second-content {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
+.no-padding-top{
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.wwd{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
 
 .contents-container {
   display: flex;
-  width: 70%;
+  flex:wrap;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap:20px;
 }
 
 .contents-container h3 {
-  font-family: Roboto;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -251,12 +309,7 @@ body {
   margin-bottom: 10px;
 }
 
-.contents-container li {
-  list-style-type: none;
-}
-
 .contents-container p {
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -266,27 +319,9 @@ body {
 
 /* Works */
 
-.third-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 70px;
-  margin: 100px;
-}
-
-.third-content h2 {
-  font-family: Roboto;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.11; /* 111.111% */
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
-}
-
 .work-images {
   display: flex;
+  width: 100%;
   flex-direction: row;
   gap: 125px;
 }
@@ -301,13 +336,14 @@ body {
 }
 
 .sub-headings {
-  font-family: Roboto;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 /* Our Team */
@@ -326,13 +362,7 @@ body {
 .team-images {
   display: flex;
   flex-direction: row;
-  gap: 90px;
-}
-
-.team-images img {
-  width: 264px;
-  height: 260px;
-  margin-bottom: 20px;
+  gap: 95px;
 }
 
 .card {
@@ -349,14 +379,14 @@ body {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.card h3 {
-  font-family: Roboto;
+.worker-names {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
-  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .card p {
@@ -365,7 +395,6 @@ body {
   align-items: center;
   padding: 0 16px;
   align-self: stretch;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -383,7 +412,6 @@ body {
 }
 
 .info p {
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -424,7 +452,6 @@ body {
 .footer-typo p {
   color: var(--cloud);
   /* Body */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -471,7 +498,6 @@ body {
   background: var(--cloud);
   color: var(--iris);
 
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -517,8 +543,7 @@ body {
 }
 
 .img-card {
-  display: flex;
-  width: 362px;
+  width:350px;
   height: 420px;
   padding-bottom: 0px;
   flex-direction: column;
@@ -542,7 +567,6 @@ body {
   gap: 8px;
   align-self: stretch;
 
-  font-family: Roboto;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -557,7 +581,6 @@ body {
   align-items: center;
   padding: 0 16px;
   align-self: stretch;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
